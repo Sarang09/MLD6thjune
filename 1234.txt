@@ -1,0 +1,30 @@
+s = "ababyz"
+new = ""
+p = None
+c = None
+
+# print(min("vlmdfr"))
+j=0
+while j==2:
+    j=j-1
+    print(new)
+    c = min(s)
+    if p:
+        # print(p)
+        if p==c:
+            c = sorted(s)[2]
+            s.replace(c,"")
+            new += c
+        elif p<c:
+            new += c
+            s.replace(c, "")
+        # else:
+        #     c = max(s[i:len(s)])
+        #     new += c
+
+    else:
+        new += c
+        s.replace(c, "")
+    p=c
+
+print(new)
